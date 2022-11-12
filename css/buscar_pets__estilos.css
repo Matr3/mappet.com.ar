@@ -1,0 +1,184 @@
+.maps {
+    display: none;
+    height: auto;
+    width: 100%;
+}
+
+.agregar__imagen-div {
+    background-image: url("../img/no-img-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    width: 100%;
+    height: calc(30vh + 72px);
+    border: 2px solid rgb(165, 163, 163);
+}
+
+
+.btn_admin {
+    box-sizing: border-box;
+    color: #2a7ae4;
+    border: 1px solid #2a7ae4;
+    width: 183px;
+    height: 51px;
+}
+
+.btn_admin:hover {
+    background: #D4E4FA;
+}
+
+.formulario {
+    background: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 91px 0;
+}
+
+.formulario_contenedor {
+    text-align: left;
+    padding: 32px;
+    width: 80%;
+}
+
+.title_addProducto {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #464646;
+    padding-bottom: 15px;
+}
+
+.agregar__box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.agregar__form {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 510px;
+}
+
+.agregar__form__imagen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.agregar__imagen-div {
+    background-image: url("../img/no-img-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    width: 100%;
+    height: calc(30vh + 72px);
+    margin-bottom: 1rem;
+}
+
+.input__image-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #FFFFFF;
+    background: orangered;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 1rem;
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.input__image-label:hover {
+    transform: scale(1.1);
+    background: orangered;
+    color: black;
+    cursor: pointer;
+}
+
+input[type="file"]#input__imagen {
+    display: none;
+}
+
+.input-container {
+    padding: 16px 0;
+}
+
+.form-control {
+    min-height: calc(1.5em + (1rem + 2px));
+    padding: 0.9rem 1rem;
+    font-size: 1.2rem;
+}
+
+.input {
+    padding-left: 10px;
+    width: 549px;
+    height: 56px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+}
+
+.input_descripcion {
+    padding-left: 10px;
+    width: 549px;
+    height: 82px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 1px solid #C8C8C8;
+}
+
+.btn_agregar {
+    color: #FFFFFF;
+    width: 100%;
+    height: 51px;
+    background: orangered;
+    border-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    border-radius: 25px;
+    transition: .5s;
+
+}
+
+.btn_agregar:hover {
+    transform: scale(1.1);
+    background: orangered;
+    color: black;
+    cursor: pointer;
+}
+
+.top_limit {
+    margin-top: 2rem;
+}
+
+.mensaje__error {
+    display: none;
+}
+
+.input__invalido .mensaje__error,
+.input-message-error {
+    font-family: 'Lemon', cursive;
+    display: block;
+    color: red;
+}
+
+
+.input__invalido .input {
+    border: 1px solid red;
+}

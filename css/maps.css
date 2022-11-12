@@ -1,0 +1,46 @@
+.contenido {}
+
+.contenedor {
+    /*
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 0 0 5px;
+    box-shadow: 3px 3px 3px rgb(59, 59, 59);
+    */
+
+
+}
+
+.espacio {
+    padding: 1rem;
+}
+
+.titulo_mapa {
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.mapa_banner {
+    height: 40vw;
+    /* The height is 400 pixels */
+    width: 100%;
+    border: 1px solid #f08e00;
+    /* The width is the width of the web page */
+    border-radius: 5px;
+}
+
+.mapa_marcadores {
+    height: 55vw;
+    /* The height is 400 pixels */
+    width: 100%;
+    border: 1px solid #f08e00;
+    /* The width is the width of the web page */
+    border-radius: 5px;
+}
+
+.img_mascotaMap {
+    width: 100px;
+
+}

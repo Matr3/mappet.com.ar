@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.container .buscador {
+  margin: auto;
+  color: white;
+}
+
+
+
+.container .buscador input[type="text"] {
+  width: 400px;
+  padding: 0.5rem;
+  border: none;
+  margin-right: 0;
+}
+
+.container .buscador input[type="button"] {
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  border: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background: black;
+  color: white;
+  margin-left: -5px;
+  transition: 0.5s;
+}
+
+.container .buscador input[type="button"]:hover {
+  transform: scale(1.1);
+  background: orangered;
+  color: black;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 568px) {
+
+  #form {
+    margin-top: 5px;
+  }
+
+  .contenedor {
+    margin-top: 6.75rem;
+  }
+
+  .container .buscador input[type="text"] {
+    width: 100%;
+  }
+
+
+}

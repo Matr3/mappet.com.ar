@@ -1,0 +1,208 @@
+/*Flexbox*/
+/*headers*/
+.caja {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cajaTitulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu_links_lista {
+    display: flex;
+    align-items: center;
+}
+
+/*main*/
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.maps .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.buscados .buscados_titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buscados_form .buscados_titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta_buscados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.buscados .tarjeta_buscados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.encontrados .encontrados_titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.encontrados .tarjeta_encontrados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/*Main pagina buscados
+.buscados_cuerpo{
+    display: flex;
+    justify-content: space-around;
+}*/
+.perfil_cuerpo {
+    display: flex;
+    flex-direction: column;
+}
+
+.perfilPets,
+.perfilPetsUser {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/*Main pagina detalle_pets*/
+.pets_detalles {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*Main pagina buscar_pets*/
+.contenido_cargaPets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+.carga_pets{
+    display: flex;
+    flex-direction: column;
+}*/
+.box_botonInicio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.formulario_carga {
+
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Footer*/
+.rodapie {
+    display: flex;
+    align-items: center;
+}
+
+.rodapie .menu_contacto {
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu_contacto .menu_contacto__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu_contacto__box .menu_contacto__contenido {
+    display: flex;
+    gap: 3rem;
+}
+
+.menu_contacto__box .main {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.menu_contacto .contacto {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+
+/*Estilo caja js buscados encontrados*/
+.wh_box,
+.wh_boxLarge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Estilo box usuario*/
+.user_display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.carga_pets {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box_ingreso {
+    display: flex;
+    /* margin: 0 auto; */
+    justify-content: center;
+}

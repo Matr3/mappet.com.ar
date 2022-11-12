@@ -1,0 +1,361 @@
+@media screen and (max-width:1200px) {
+
+    .buscados,
+    .encontrados,
+    .espacio_margin_form {
+        margin: 2rem 2rem;
+        padding: 32px;
+    }
+
+    .mapa_banner {
+        height: 50vw;
+
+    }
+
+    .menu_contacto__box {
+        transform: scale(0.7);
+    }
+
+    .contenido_cargaPets,
+    .box_ingreso {}
+
+    .formulario_contenedor {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .video {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .video {
+        padding: 7rem 2rem;
+    }
+
+    .formSearch {
+
+        margin-left: 15px;
+    }
+
+    .menu_links {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .btn {
+        background-color: orangered;
+    }
+
+    .modal-title {
+        font-size: 16px;
+    }
+
+    .block {
+        display: none;
+    }
+
+    .iconActivity {
+        display: block;
+    }
+
+    .buscados,
+    .encontrados {
+        margin: 1rem 2rem;
+    }
+
+    .espacio_margin {
+        padding: 1rem 5rem;
+    }
+
+    .mapa_banner {
+        height: 80vw;
+
+    }
+
+    .buscados_titulo_estilo,
+    .encontrados_titulo_estilo {
+        font-weight: 400;
+        font-size: 26px;
+
+    }
+
+    .buscados .buscados_titulo,
+    .encontrados .encontrados_titulo {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .contenedor {
+        margin-top: 1rem;
+    }
+
+    .rodapie .menu_contacto {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .contacto {
+        width: 80%;
+    }
+
+    .menu_contacto__box {
+        transform: scale(0.7);
+    }
+
+    .menu_contacto {
+        /* margin: 3rem auto; */
+    }
+
+    .container .buscador {
+        margin: 15px;
+    }
+
+    .encontrados .tarjeta_encontrados,
+    .buscados .tarjeta_buscados {
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .menu_contacto__box .menu_contacto__contenido {
+        gap: 0rem;
+    }
+
+    .registroMargin {
+
+        margin: 3rem;
+    }
+
+    .detalle_cuerpo,
+    .carga_pets, .search_pets {
+        margin: 2rem auto;
+    }
+
+    .agregar__form__imagen {
+        flex-direction: column;
+
+    }
+
+    .titulo_mapa,
+    .title_addPets {
+        font-size: 26px;
+
+    }
+
+    .buscados_form .buscados_titulo {
+
+        justify-content: space-around;
+
+    }
+
+    .pets_detalles {
+        margin: 2rem auto;
+    }
+
+    .pets_detalles {
+        flex-wrap: wrap;
+    }
+
+    #burger-menu {
+        cursor: pointer;
+        height: 27px;
+        width: 27px;
+        padding: 10px;
+        overflow: visible;
+        position: relative;
+        z-index: 3;
+    }
+
+    #burger-menu span,
+    #burger-menu span:before,
+    #burger-menu span:after {
+        background: #fff;
+        display: block;
+        height: 4px;
+        opacity: 1;
+        position: absolute;
+        left: 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    #burger-menu span:before,
+    #burger-menu span:after {
+        content: "";
+    }
+
+    #burger-menu span {
+        right: 0px;
+        top: 13px;
+        width: 27px;
+    }
+
+    #burger-menu span:before {
+        left: 0px;
+        top: -10px;
+        width: 16px;
+    }
+
+    #burger-menu span:after {
+        left: 0px;
+        top: 10px;
+        width: 20px;
+    }
+
+    #burger-menu.close span {
+        transform: rotate(-45deg);
+        top: 13px;
+        width: 27px;
+    }
+
+    #burger-menu.close span:before {
+        top: 0px;
+        transform: rotate(90deg);
+        width: 27px;
+    }
+
+    #burger-menu.close span:after {
+        top: 0px;
+        left: 0;
+        transform: rotate(90deg);
+        opacity: 0;
+        width: 0;
+    }
+
+    #menu {
+        z-index: 2;
+        min-width: 100%;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        padding-top: 20px;
+        transition: all 0.3s ease-in-out;
+
+
+    }
+
+    #menu.overlay {
+        visibility: visible;
+        opacity: 1;
+        background: rgba(0, 0, 0, 85%);
+    }
+
+    #menu li {
+        list-style: none;
+    }
+
+    #menu a,
+    .textInicio {
+        color: orangered;
+        font-size: 24px;
+
+        text-decoration: none;
+    }
+
+    .titleUser,
+    .miCuenta,
+    .btInicio {
+        padding-bottom: 15px;
+        color: orangered;
+        font-family: 'Lemon', cursive;
+        font-style: normal;
+        font-size: 18px;
+    }
+
+    .caja {
+        display: flex;
+
+    }
+
+    .cajaTitulo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .espacio_margin {
+        padding: 1rem 0;
+    }
+
+    .buscados_titulo,
+    .encontrados_titulo {
+        padding: 0px;
+    }
+
+    .wh_boxLarge {
+        width: 250px;
+        height: 250px;
+    }
+
+    .mapa_marcadores {
+        height: 550px;
+    }
+
+    .youtube,
+    .skewed {
+        width: 100%;
+    }
+
+    .skewed {
+        padding: 15px;
+    }
+
+
+
+}
+
+@media screen and (max-width:360px) {
+
+    .espacio {
+        margin: 0px;
+        padding: 10px;
+    }
+
+    .formulario_contenedor {
+        text-align: left;
+        padding: 0px;
+        width: auto;
+    }
+
+    .tarjeta_buscados {
+        justify-content: center;
+
+    }
+
+    .video {
+        padding: 7rem 1rem;
+
+    }
+
+    .youtube {
+        width: auto;
+        height: auto;
+    }
+
+    .contacto {
+        padding: 0;
+    }
+
+    .espacio_margin_form,
+    .buscados {
+        padding: 0;
+    }
+
+    .marginIngreso {
+        padding: 2rem;
+    }
+    .donaciones{
+        padding: 3rem 2rem;
+    }
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilos Css-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/maps.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/buscar_pets__estilos.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/login_modal.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <!--Api google maps-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="js/maps_marcadores.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5uKtimx71A6YXqkXYEyUOzLYR-XG2G4&callback=initMap&v=weekly"
+        defer></script>
+    <!--Carga CRUB de Pets Buscados y Encontrados-->
+    <script type="module" src="js/editar_pets.js"></script>
+    <script type="module" src="js/buscados.js"></script>
+    <!--Libreria Scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Login google-->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type="module" src="js/loginIndex.js"></script>
+    <!--Icon de fontwesome-->
+    <script src="https://kit.fontawesome.com/a1140612d3.js" crossorigin="anonymous"></script>
+    <!--Boton Modal Login google-->
+    <script type="module" src="js/loginModal.js"></script>
+    <!--Validacion formulario-->
+    <script type="module" src="js/validar.js"></script>
+
+    <title>Map Pet - ::Si Buscas o Encontraste una mascota...::</title>
+</head>
+
+<body>
+    <header class="caja">
+        <section class="cajaTitulo">
+            <div id="burger-menu">
+                <span></span>
+            </div>
+            <a href="./index.html">
+                <img class="logo_imgen block" src="img/Pet Finder.png" alt="mappet">
+            </a>
+            <section class="container">
+                <div class="buscador">
+                    <form id="form" class="formSearch">
+                        <img src="ico/finder.ico" alt="" class="iconActivity">
+                        <input type="text" name="buscador" id="buscadorPrincipal" placeholder="Buscar mascota.">
+                        <input type="button" value="Buscar" id="btnBuscar">
+                    </form>
+                </div>
+            </section>
+
+
+
+        </section>
+        <section class="cajaBotonera">
+            <nav class="menu" id="menu">
+                <ul class="menu_links">
+                    <li class="menu_links_lista"><a class="links_decoration" href="index.html">Home</a></li>
+                    <li id="Btbuscar" class="menu_links_lista"><a class="links_decoration"
+                            href="buscar_pets.html">¿Perdiste o Encontraste?</a></li>
+                    <li class="menu_links_lista"><a class="links_decoration" href="mapa_pets.html">MapPet</a></li>
+                    <li class="menu_links_lista "><a class="links_decoration" href="buscados.html">Buscados</a></li>
+                    <li class="menu_links_lista "><a class="links_decoration" href="encontrados.html">Encontrados</a>
+                    </li>
+                    <li class="menu_links_lista box_botonInicio textInicio">
+                        <button class="btn btn-modal-open">Ingresar</button>
+                        <div id="overlay">
+                            <div class="modal">
+                                <div class="modal-card">
+                                    <h1 class="modal-title">
+                                        Inicia sesión con google.
+                                    </h1>
+                                    <div class="modal-content">
+                                        <div class="centrar" id="buttonDiv"></div>
+                                    </div>
+                                    <button class="btn btn-modal-close">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu_links_lista box_detalle_user" data-usuario></li>
+                </ul>
+            </nav>
+        </section>
+
+    </header>
+
+    <main class="carga_pets">
+
+        <div class="contenido_cargaPets">
+            <section class="box_ingreso">
+                <p class="descripcion_detalles">Acceda con su cuenta de google para mas información</p>
+            </section>
+            <section class="maps">
+                <div class="contenedor espacio">
+                    <h3 class="titulo_mapa">Marque la ultima ubicación</h3>
+                    <!--The div element for the map -->
+                    <div id="map" class="mapa_banner"></div>
+
+                    <!-- 
+                        The `defer` attribute causes the callback to execute after the full HTML
+                        document has been parsed. For non-blocking uses, avoiding race conditions,
+                        and consistent behavior across browsers, consider loading using Promises
+                        with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+                        -->
+                </div>
+            </section>
+
+            <section class="formulario_carga">
+                <form action="#" class="formulario_contenedor" data-form>
+                    <fieldset>
+                        <legend class="title_addPets">Agregar una imagen</legend>
+
+
+                        <div class="agregar__form__imagen">
+                            <div class="agregar__imagen-div" id="box__imagen"></div>
+                            <label for="input__imagen" class="input__image-label">Elegir archivo</label>
+                            <input type="file" class="agregar__imagen input" id="input__imagen"
+                                data-input="imagen_agregar" accept="image/*">
+                        </div>
+                        <div class="falta__carga__archivo">
+                            <span class="mensaje__error archivo__faltante">Debe seleccionar un archivo de imagen para
+                                cargar la mascota</span>
+                        </div>
+                        <!--
+                        <label for="formFileLg" class="input-label"></label>
+                        <input class="form-control input" id="formFileLg" type="file" required data-tipo="imagen_prod">
+                        -->
+                        <div class="input-container top_limit">
+                            <select name="select" class="input_formulario" data-tipo="selector">
+                                <option value="value1">Perdiste tu mascota?</option>
+                                <option value="value2">Encontraste alguna mascota?</option>
+                            </select>
+                        </div>
+
+                        <div class="input-container">
+                            <input name="animal" id="animal" class="input_formulario type=" text"
+                                placeholder="Raza y Animal" required data-tipo="animal" pattern="[\s\S]{4,40}">
+                            <label class="input-label" for="animal"></label>
+                            <span class="input-message-error"></span>
+                        </div>
+
+                        <div class="input-container">
+                            <input name="color" id="color" class="input_formulario" type="text"
+                                placeholder="Color del animal" required data-tipo="color" pattern="[\s\S]{3,20}">
+                            <label class="input-label" for="color"></label>
+                            <span class="input-message-error"></span>
+                        </div>
+                        <div class="input-container">
+                            <input name="tamanio" id="tamanio" class="input_formulario" type="text"
+                                placeholder="Tamaño y peso del animal" required data-tipo="tamanio"
+                                pattern="[(s\S]{1,100}">
+                            <label class="input-label" for="tamanio"></label>
+                            <span class="input-message-error"></span>
+                        </div>
+                        <div class="input-container">
+                            <textarea name="descripcion" id="descripcion" class="input_formulario" type="text"
+                                placeholder="Descripción del animal" required data-tipo="descripcion"
+                                pattern="[\s\S]{5,150}"></textarea>
+                            <label class="input-label" for="descripcion"></label>
+
+                        </div>
+                        <div class="input-container">
+                            <input name="email" id="email" class="input_formulario" type="text"
+                                placeholder="Email de Contacto" required data-tipo="email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <label class="input-label" for="email"></label>
+                            <span class="input-message-error"></span>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn_agregar">Agregar mascota</button>
+                </form>
+            </section>
+        </div>
+
+        <section class="buscados">
+            <div class="buscados_titulo">
+                <h2 class="buscados_titulo_estilo">Buscados</h2>
+                <a class="btn_todo" href="./buscados.html">Ver todo →</a>
+            </div>
+            <div class="tarjeta_buscados" data-buscados>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="rodapie">
+            <div class="menu_contacto">
+                <div class="menu_contacto__box">
+                    <div class="menu_contacto__contenido">
+                        <a href="./index.html">
+                            <img class="logo_imgen" src="img/Pet Finder.png" alt="mappet">
+                        </a>
+                        <a href="#" target="_blank"><i class="colorIcon fa fa-instagram fa-5x"></i></a>
+                        <a href="#" target="_blank"><i class="colorIcon fa-brands fa-facebook fa-5x"></i></a>
+                    </div>
+                </div>
+                <div class="contacto">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contacto_form">
+                        <input type="hidden" name="access_key" value="46fb5db9-4818-4677-b3ce-d45c76bc6dae">
+                        <fieldset class="estilos_form">
+                            <legend class="title_contacto">Hable con nosotros</legend>
+                            <div class="input-container">
+                                <label for="email"></label>
+                                <input class="input_nombre" id="email" type="email" name="email"
+                                    placeholder="Escriba su email" required data-tipo="nombre"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                <span class="input-message-error"></span>
+                            </div>
+                            <textarea class="input_mensaje" id="msg" type="text" name="message"
+                                placeholder="Escribe tu mensaje" required data-tipo="mensaje"
+                                pattern="[\s\S]{5,120}"></textarea>
+
+                            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                            <button type="submit" id="bt" class="btn_contacto">Enviar Consulta</button>
+                        </fieldset>
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <section class="donar">
+            <div class="donaciones">
+                <h4 class="desarrollo">Gracias por tu donación. Esta vida siempre será bonita por personas como tú, voluntarios que ayudan sin esperar nada a cambio, personas que llenan el mundo de luz…</h4>
+                <button type="submit" class="btnDonar">Donar</button>
+            </div>
+        </section>
+        <div class="rodapie_end">
+            <h4 class="desarrollo">Copyright © Your Website 2022 - Desarrollado por Tremari Marcelo</h4>
+        </div>
+    </footer>
+    <script src="js/burgerMenu.js"></script>
+    <!--Libreria Scroll llama a javascript-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+
+</html>

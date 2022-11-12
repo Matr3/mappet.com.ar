@@ -1,0 +1,19 @@
+{
+  "name": "mappet",
+  "version": "1.0.0",
+  "description": "Si perdistes o encontraste una mascota, publica para que la mascota encuentre su casa.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matr3/mappet.git"
+  },
+  "author": "Matr3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matr3/mappet/issues"
+  },
+  "homepage": "https://github.com/Matr3/mappet#readme"
+}
